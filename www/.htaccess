@@ -1,0 +1,10 @@
+AddDefaultCharset UTF-8
+php_value display_errors 1
+
+RewriteEngine On
+RewriteRule ^profile/activation/([a-zA-Z0-9_-]+)$ profile/activation.php?code=$1
+RewriteRule ^profile/activation/([a-zA-Z0-9_-]+)/$ profile/activation.php?code=$1
+RewriteRule ^profile/([0-9_-]+)$ profile/index.php?user=$1
+RewriteRule ^profile/([0-9_-]+)/$ profile/index.php?user=$1
+RewriteRule ^profile/([0-9_-]+)/inventory$ profile/inventory.php?user=$1
+RewriteRule ^profile/([0-9_-]+)/inventory/$ profile/inventory.php?user=$1
